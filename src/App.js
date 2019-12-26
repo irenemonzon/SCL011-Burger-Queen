@@ -1,8 +1,34 @@
-import React,{Component} from 'react';
+import React from 'react';
 import './App.css';
-import Menu from './Component/menu';
+import Breakfast from './Component/breakfast';
+import Lunch from './Component/lunch';
 
-class App extends Component{
+import Auth from './Auth';
+import { useUser } from 'reactfire' ;
+
+function App () {
+
+    const user = useUser();
+
+    return (
+        <div className="App">
+            { user && <p>Usuario:{user.email}</p> }
+            <Auth />   
+               <div>
+                <Breakfast />
+                <Lunch />
+              </div>
+        </div>
+    
+    );
+}
+  
+export default App;
+
+
+
+
+/*class App extends Component{
   
 render(){
   return(
@@ -14,3 +40,5 @@ render(){
 }
 
 export default App;
+*/
+
