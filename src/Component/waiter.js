@@ -39,7 +39,7 @@ const Waiter = () => {
                     <li>
                         <Link to="/navigation/waiter/lunch">Almuerzo</Link>
                     </li> 
-                        <Link to="/navigation">Volver</Link>
+                        <Link to="/">Volver</Link>
                 </ul>
             </div>    
       
