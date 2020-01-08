@@ -32,6 +32,7 @@ const Waiter = () => {
                       <InputClient />
                       <br />
                   </div>
+                  <div className="navigation-link">
                   <ul>
                     <li>
                         <Link to="/navigation/waiter/breakfast">Desayuno</Link>
@@ -40,6 +41,7 @@ const Waiter = () => {
                         <Link to="/navigation/waiter/lunch">Almuerzo</Link>
                     </li> 
                 </ul>
+                </div>
             </div>    
       
     )

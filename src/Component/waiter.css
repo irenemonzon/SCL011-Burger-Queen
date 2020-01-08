@@ -2,3 +2,14 @@
     height: 10vh;
     background-color: white;
 }
+
+.navigation-link ul li {
+background-color: red;
+  color: white;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+
+
+}
