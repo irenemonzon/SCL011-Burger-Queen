@@ -1,0 +1,36 @@
+.navbar-login {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 30vh;
+}
+
+.navbar-login input {
+    margin-bottom: 20px;
+    width: 50vh;
+    height: 25px;
+    background: transparent;
+    border: 0px;
+    border-bottom: 3px solid white;
+}
+
+.navbar-login input:focus {
+    outline: 0;
+}
+
+.navbar-login label {
+    margin: 5px;
+}
+
+.navbar-login button {
+    text-align: center;
+    width: 50vh;
+    height: 8vh;
+    margin: 20px;
+    border-radius: 15px;
+    background: white;
+    font-weight: bolder;
+    font-size: 12px;
+}

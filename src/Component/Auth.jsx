@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
+import './Auth.css';
 import "firebase/auth";
 import Navigation from'./Navigation';
 import { useFirebaseApp, useUser } from "reactfire";
@@ -34,7 +35,7 @@ export default (props) => {
             {
                 !user && 
 
-            <div>
+            <div className="navbar-login">
             <label htmlFor="email">Correo</label>
             <input type="email" id="email" onChange={ (event) => setEmail(event.target.value)}/>
             <label htmlFor="password">Contraseña</label>

@@ -10,7 +10,7 @@ class InputClient extends Component {
 
     render () {
         return (
-            <div>
+            <div className="">
             <p>Nombre Cliente</p>
             <input onChange={e => this.setState({value: e.target.value})}
             value={this.state.value} />

@@ -4,8 +4,8 @@ import Auth from './Component/Auth';
 import Nav from './Component/Navigation';
 import Waiter from './Component/waiter';
 import Kitchen from './Component/kitchen';
-import Breakfast from './data/breakfast';
-import Lunch from './data/lunch';
+import Breakfast from './Component/Breakfast';
+import Lunch from './Component/Lunch';
 import { useUser } from 'reactfire' ;
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
@@ -18,13 +18,17 @@ function App () {
     return (
       <Router>
         <div className="App">
-            { user && <p>Meser@:{user.email}</p> }
+          <div className="navbar-waiter">
+          { user && <p>Meser@:{user.email}</p> }
+          </div>
+            <div className="nav-component">
             <Route exact path="/" component={Auth}/>
             <Route exact path ="/navigation" component={Nav} />
             <Route  path="/navigation/waiter" component={ Waiter } />
             <Route  path="/navigation/kitchen" component={ Kitchen } />
             <Route  path="/navigation/waiter/breakfast" component={ Breakfast } />
             <Route  path="/navigation/waiter/lunch" component={ Lunch} />
+            </div>
         </div>
       </Router>
     );
