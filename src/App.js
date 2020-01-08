@@ -1,21 +1,19 @@
 import React from 'react';
 import './App.css';
-
-//import Breakfast from './data/breakfast';
-//import Lunch from './data/lunch';
 import Auth from './Component/Auth';
 import Nav from './Component/Navigation';
 import Waiter from './Component/waiter';
 import Kitchen from './Component/kitchen';
-import Breakfast from './data/breakfast';
-import Lunch from './data/lunch';
+import Breakfast from './Component/Breakfast';
+import Lunch from './Component/Lunch';
 import { useUser } from 'reactfire' ;
-
 import { BrowserRouter as Router, Route} from 'react-router-dom';
+
 
 function App () {
 
     const user = useUser();
+    
 
     return (
       <Router>

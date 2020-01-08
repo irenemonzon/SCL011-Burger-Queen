@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
+
 class InputClient extends Component {
 
     state = {
-        value:"",
-      //  showBreakfast:false  
+        value:"", 
     }
 
     render () {
@@ -25,8 +25,6 @@ class InputClient extends Component {
 
 const Waiter = () => {
 
-    
-
     return (
        
             <div>
@@ -41,6 +39,7 @@ const Waiter = () => {
                     <li>
                         <Link to="/navigation/waiter/lunch">Almuerzo</Link>
                     </li> 
+                        <Link to="/navigation">Volver</Link>
                 </ul>
             </div>    
       

@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
 import db from '../config';
-import { Table, Button } from "reactstrap";
+import { Table } from "reactstrap";
+import ShowProduct from '../Component/productMenu'
 
-// import { useFirebaseApp, useDatabaseList } from "reactfire";
- 
-export default class Breakfast extends Component {
+
+class Breakfast extends Component {
 
     state = {
-        items: [],
-        value:"",
+        items:[],
+
     }
+
 // snapshot es la respuesta que nos da la peticion get sobre todos los documentos "docs"
     componentDidMount () {
+        const BreakfastCollection = 
         db.collection("breakfast").get().then((snapShots) => {
             this.setState({
                 items: snapShots.docs.map(doc => {
@@ -22,52 +24,44 @@ export default class Breakfast extends Component {
         })
     }
 
-    actionButton = (e) => {
-        this.setState({
-            buttonValue:e.target.value
-        })
-    }
+    getOrder = () => {
+        db.collection("pedidos").add({
+            name: "", 
+            price: "",
+            })
+            .then ( () => {
+                console.log("ok")
+            }).catch ( () => {
+                console.log("error")
+            })
+        }
+
+// snapshot es la respuesta que nos da la peticion get sobre todos los documentos "docs"
 
 
-    render () {
-        const { items, buttonValue} = this.state;
-
-        return (
-            <div>
-                <Table>
-                    <thead>
-                        <tr>
-                           -
+render () {
+    const { items } = this.state;
+    return (
+        <div>
+            <Table>
+                <tbody>
+                    { items.map((item, index) => (
+                        <tr key={index}>
+                            <td>{item.data.name}</td>
+                            <td>{item.data.price}</td>
+                            <td>
+                            <button onClick={this.getOrder}>Agregar</button>
+                            </td>
+                            <ShowProduct 
+                            name={item.data.name}
+                                />
                         </tr>
-                    </thead>
-                    <tbody>
-                        { items && items !== undefined ? items.map((item, key) => (
-                            <tr key={key}>
-                                {item.data.name}
-                                <td>{item.data.price}</td>
+                    ))} 
+                </tbody>
+            </Table>
+        </div>
+    )}
 
-                                <td>
-                                <Button 
-                                value={buttonValue}
-                                onClick={this.actionButton}>
-
-                                </Button>
-                                <button onClick={e => this.setState({buttonValue})}>
-                                Agregar</button>
-                                </td>
-                    
-                            </tr>
-
-                        )):null } 
-                    </tbody>
-                </Table>
-
-            </div>
-        )  
-    }
 }
 
-
-/*<button onClick={e => this.setState({buttonValue})}>
-                                Agregar</button>
-                                */
+export default Breakfast
