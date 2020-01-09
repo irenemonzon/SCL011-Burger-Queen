@@ -36,8 +36,14 @@
 }
 
 #btn-logOut {
+    background-color: white;
+    border-radius: 15px ;
     width: 150px;
     height: 30px;
-    font-weight: normal;
     font-size: 12px;
+    float: right;
+}
+
+#btn-logOut:hover{
+    background-color: #00FF7F;
 }
