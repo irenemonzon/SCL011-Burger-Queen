@@ -23,8 +23,8 @@ function App () {
             <Route exact path ="/navigation" component={Nav} />
             <Route  path="/navigation/waiter" component={ Waiter } />
             <Route  path="/navigation/kitchen" component={ Kitchen } />
-            <Route  path="/navigation/waiter/breakfast" component={ Breakfast } />
-            <Route  path="/navigation/waiter/lunch" component={ Lunch} />
+            <Route  path="/navigation/waiter/Breakfast" component={ Breakfast } />
+            <Route  path="/navigation/waiter/Lunch" component={ Lunch} />
         </div>
       </Router>
     );
