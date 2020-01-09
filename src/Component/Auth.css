@@ -34,3 +34,10 @@
     font-weight: bolder;
     font-size: 12px;
 }
+
+#btn-logOut {
+    width: 150px;
+    height: 30px;
+    font-weight: normal;
+    font-size: 12px;
+}

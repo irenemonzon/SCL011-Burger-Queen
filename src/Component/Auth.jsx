@@ -45,7 +45,7 @@ export default (props) => {
             }
             {  user &&
                 <React.Fragment>
-                <Navigation/><button onClick={logOut}>Cerrar sesion</button>
+                <Navigation/><button id="btn-logOut" onClick={logOut}>Cerrar sesion</button>
                 </React.Fragment>
             }
         </div>

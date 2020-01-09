@@ -1,7 +1,8 @@
 import React, { Component} from 'react';
 import data from '../data.json';
 import db from '../config';
-import Button from './button'
+import Button from './button';
+import './Breakfast.css'
 // import { Table } from "reactstrap";
 
 class Breakfast extends Component {
@@ -75,7 +76,7 @@ class Breakfast extends Component {
 render () {
     const dataBreakfast = this.state.products.map((data, index) => {
     return (
-        <div>
+        <div className="products">
             <Button 
             clicking={this.saveItem}
             products={data}
@@ -89,20 +90,19 @@ render () {
 )
 
 return (
-    <div>
+    <div className="container-products">
     {dataBreakfast}
     {this.state.orders.map((order, i) => {
         return (
-            <div>
-                <p>{order.name} price$ {order.price}</p>
-                <button onClick={this.deleteItem.bind(this, i, order.price)}>
+            <div className="container-result">
+                <p>{order.name} · $ {order.price}</p>
+                <button id="btn-delete" onClick={this.deleteItem.bind(this, i, order.price)}>
                 Eliminar
                 </button>
-        
                 <br />
                 <p>Total:</p>
                 <p>{this.state.price}</p>
-                <button onClick={() => this.getOrder()}>Enviar</button>
+                <button id="btn-send" onClick={() => this.getOrder()}>Enviar</button>
             </div>
         )
     })}

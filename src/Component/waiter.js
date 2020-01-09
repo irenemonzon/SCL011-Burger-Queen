@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import './waiter.css'
 
 
 class InputClient extends Component {
@@ -10,8 +11,8 @@ class InputClient extends Component {
 
     render () {
         return (
-            <div className="">
-            <p>Nombre Cliente</p>
+            <div className="input-client">
+            <p>Cliente</p>
             <input onChange={e => this.setState({value: e.target.value})}
             value={this.state.value} />
             <br />
@@ -28,10 +29,8 @@ const Waiter = () => {
     return (
        
             <div>
-                  <div>
                       <InputClient />
                       <br />
-                  </div>
                   <div className="navigation-link">
                   <ul>
                     <li>
@@ -40,7 +39,7 @@ const Waiter = () => {
                     <li>
                         <Link to="/navigation/waiter/lunch">Almuerzo</Link>
                     </li> 
-                        <Link to="/navigation">Volver</Link>
+                        <Link to="/">Volver</Link>
                 </ul>
                 </div>
             </div>    
