@@ -1,0 +1,21 @@
+.container-routing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container-routing ul li a {
+    text-decoration: none;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 1.5em; 
+    color: black;
+}
+
+.container-routing ul li {
+    margin: 10px 0px 30px 0px;
+    list-style: none;
+}
