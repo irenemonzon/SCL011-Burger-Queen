@@ -25,7 +25,8 @@
   text-decoration: none;
   background-color: white;
   border-radius: 15px;
-  padding: 10px 1.5em;  
+  padding: 10px 1.5em; 
+  color: black;
 }
 
 .navigation-link ul li {
