@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import './Navigation.css';
 
 
 function Nav () {
     return (
-        <div>
+        <div className="container-routing">
                 <ul>
                     <li>
                     <Link to="/navigation/waiter">Meserx</Link>
