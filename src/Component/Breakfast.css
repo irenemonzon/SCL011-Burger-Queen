@@ -1,0 +1,31 @@
+.container-products{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+#btn-delete {
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 30px;
+}
+
+#btn-delete:hover{
+    background-color:#ff2b00;
+}
+
+#btn-send {
+    width: 100px;
+    height: 30px;
+}
+
+.container-result {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    width: 70vh;
+}

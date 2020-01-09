@@ -18,13 +18,17 @@ function App () {
     return (
       <Router>
         <div className="App">
-            { user && <p>Meser@:{user.email}</p> }
+          <div className="navbar-waiter">
+          { user && <p>Meser@:{user.email}</p> }
+          </div>
+            <div className="nav-component">
             <Route exact path="/" component={Auth}/>
             <Route exact path ="/navigation" component={Nav} />
             <Route  path="/navigation/waiter" component={ Waiter } />
             <Route  path="/navigation/kitchen" component={ Kitchen } />
             <Route  path="/navigation/waiter/breakfast" component={ Breakfast } />
             <Route  path="/navigation/waiter/lunch" component={ Lunch} />
+            </div>
         </div>
       </Router>
     );
